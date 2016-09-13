@@ -1,8 +1,6 @@
-sum() {
-    local sum=0
-    for arg in "$@"; do
-        (( sum += arg ))
-    done   
-    echo $sum
-}
-
+sum=0
+for i in $*
+do
+    sum=`expr $sum + $i`
+done
+echo "Summation of "$#" no. is: "$sum
